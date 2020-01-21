@@ -15,5 +15,8 @@ namespace WoopiWebMVC.Data
         }
 
         public DbSet<WoopiWebMVC.Models.Department> Department { get; set; }
+        public DbSet<WoopiWebMVC.Models.Seller> Seller { get; set; }
+
+        public DbSet<WoopiWebMVC.Models.SalesRecord> SalesRecord { get; set; }
     }
 }
