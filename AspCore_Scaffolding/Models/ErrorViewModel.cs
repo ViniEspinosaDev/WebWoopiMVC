@@ -1,6 +1,6 @@
 using System;
 
-namespace WoopiWebMVC.Models
+namespace AspCore_Scaffolding.Models
 {
     public class ErrorViewModel
     {
