@@ -37,7 +37,8 @@ namespace WoopiWebMVC
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<WoopiWebMVCContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("WoopiWebMVCContext")));
+                options.UseMySql(Configuration.GetConnectionString("WoopiWebMVCContext"), builder =>
+                    builder.MigrationsAssembly("WoopiWebMVC")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
