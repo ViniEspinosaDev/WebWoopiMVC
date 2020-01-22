@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WoopiWebMVC.Data;
 using WoopiWebMVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace WoopiWebMVC.Services
 {
@@ -16,9 +17,9 @@ namespace WoopiWebMVC.Services
             _context = context;
         }
 
-        public List<Department> FindAll()
+        public async Task<List<Department>> FindAllAsync()
         {
-            return _context.Department.OrderBy(x => x.Name).ToList();
+            return await _context.Department.OrderBy(x => x.Name).ToListAsync();
         }
     }
 }
